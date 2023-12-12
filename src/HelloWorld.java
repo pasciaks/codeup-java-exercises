@@ -4,6 +4,10 @@ public class HelloWorld {
         System.out.println("Hello, World!");
     }
 
+    public void sayHello() {
+        System.out.println("Hello, World!");
+    }
+
     // Follow PascalCase for naming classes.
     // Follow camelCase for naming variables and methods.
     // Follow SCREAMING_SNAKE_CASE for naming constants.
