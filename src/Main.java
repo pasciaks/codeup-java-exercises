@@ -15,8 +15,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HelloWorld helloWorld = new HelloWorld();
-
         System.out.println("Hello, World!");
 
         System.out.println("args = " + Arrays.toString(args));
@@ -24,8 +22,6 @@ public class Main {
         for (String arg : args) {
             System.out.println("arg = " + arg);
         }
-
-        helloWorld.sayHello();
 
         byte myByte = 127;
         byte myByteInBinary = 0b1111111;
@@ -65,6 +61,34 @@ public class Main {
 
         final int SIDES_OF_A_DICE = 6; // constant variable in JAVA
         // SIDES_OF_A_DICE = 6; // this will not work because it is a constant variable
+
+        byte someNumber = 32;
+
+        short anotherNumber = 123;
+
+        int total = (int) ( someNumber + anotherNumber );
+
+        int anotherTotal = (int) someNumber + (int) anotherNumber;
+
+        int yetAnother = (int) anotherTotal + (int) 5;
+
+        float almostPi = 3.14159F;
+
+        double doublePi = 3.141592653589793D;
+
+        long rawLong = 123234123412341234L;
+
+        int piToInt = (int) almostPi;
+
+        System.out.println("almostPi = " + almostPi);
+
+        System.out.println("doublePi = " + doublePi);
+
+        System.out.println("piToInt = " + piToInt);
+
+        System.out.println("doublePi = " + doublePi);
+
+        System.out.println("rawLong = " + rawLong);
 
     }
 }
