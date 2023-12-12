@@ -64,6 +64,7 @@ public class Main {
         System.out.println("mySentenceWithQuotes = " + mySentenceWithQuotes);
 
         final int SIDES_OF_A_DICE = 6; // constant variable in JAVA
+        // SIDES_OF_A_DICE = 6; // this will not work because it is a constant variable
 
     }
 }
