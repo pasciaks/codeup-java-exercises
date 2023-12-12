@@ -54,8 +54,16 @@ public class Main {
         boolean myBoolean = true;
         System.out.println("myBoolean = " + myBoolean);
 
-        String myString = "Hello, World!";
+        String myString = "Hello, World!"; // String is a reference type
         System.out.println("myString = " + myString);
+
+        char letter = '\u0041'; // Unicode for letter 'A', note the value is in HEX
+        System.out.println(letter);
+
+        String mySentenceWithQuotes = "Hello, \"World!\"";
+        System.out.println("mySentenceWithQuotes = " + mySentenceWithQuotes);
+
+        final int SIDES_OF_A_DICE = 6; // constant variable in JAVA
 
     }
 }
