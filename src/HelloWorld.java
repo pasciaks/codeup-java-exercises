@@ -104,7 +104,7 @@ public class HelloWorld {
 
 
         //        Object is the most generic type in Java. You can assign any value to a variable of type Object.
-        //        What do you think will happen when the following code is run?
+        //        What do you think will happen when the following code is run?  Runtime error ?? Versus compile time error ??
 
         //                String theNumberThree = "three";
         //                Object o = theNumberThree;
