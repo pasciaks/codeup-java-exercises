@@ -140,6 +140,14 @@ public class ConsoleExercises {
 
         scanner = new Scanner(System.in); // clear out previous scanner input
 
+        //        Bonuses
+        //
+        //        The Scanner class can be told specifically what characters or pattern separates tokens in a piece of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner (assuming the variable holding the Scanner is named scanner):
+        //
+        //        scanner.useDelimiter("\n");
+        //
+        //        How does this change the way your program operates? Must enter between values.
+
         scanner.useDelimiter("\n");
 
         System.out.println("Enter the length and width integers separated by new line: ");
@@ -153,11 +161,5 @@ public class ConsoleExercises {
 }
 
 //        Bonuses
-//
-//        The Scanner class can be told specifically what characters or pattern separates tokens in a piece of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner (assuming the variable holding the Scanner is named scanner):
-//
-//        scanner.useDelimiter("\n");
-//
-//        How does this change the way your program operates? Yes, must enter between values.
 //
 //        Rewrite your classroom program to use nextInt method. If you added the line of code above to your application, you should now have no trouble handling multiple pieces of user input.
