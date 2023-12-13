@@ -9,6 +9,8 @@
 
 // Classes need to be separate files, not 'in code' classes.
 
+import java.io.IOError;
+
 public class HelloWorld {
 
     public static void main(String[] args) {
@@ -109,6 +111,17 @@ public class HelloWorld {
         //                String theNumberThree = "three";
         //                Object o = theNumberThree;
         //                int three = (int) o;
+
+        try {
+            String theNumberThree = "three";
+            Object o = theNumberThree;
+            int three = (int) o;
+        }
+        catch (Exception e) {
+            System.out.println(e.toString());
+        }
+
+
 
         //        Copy and paste the code above and then run it. Does the result match with your expectation? yes, I imagined it would fail.
 
