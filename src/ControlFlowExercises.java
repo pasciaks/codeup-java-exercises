@@ -39,39 +39,39 @@ public class ControlFlowExercises {
         //        Create a while loop that runs so long as i is less than or equal to 15
         //        Each loop iteration, output the current value of i, then increment i by one.
         // ----------------------------------------------------------------------------------------------------------------
-        //        int i = 5;
-        //        while (i <= 15) {
-        //            System.out.println(i);
-        //            i++;
-        //        }
+                int i = 5;
+                while (i <= 15) {
+                    System.out.println(i);
+                    i++;
+                }
 
         // ----------------------------------------------------------------------------------------------------------------
         //        Do While
         //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
         // ----------------------------------------------------------------------------------------------------------------
-        //        int i = 0;
-        //        do {
-        //            System.out.println(i);
-        //            i += 2;
-        //        } while (i <= 100);
+                int i2 = 0;
+                do {
+                    System.out.println(i2);
+                    i2 += 2;
+                } while (i2 <= 100);
 
         // ----------------------------------------------------------------------------------------------------------------
         //        Alter your loop to count backwards by 5's from 100 to -10.
         // ----------------------------------------------------------------------------------------------------------------
 
-        //        int i = 100;
-        //        do {
-        //            System.out.println(i);
-        //            i -= 5;
-        //        } while (i >= -10);
+                int i3 = 100;
+                do {
+                    System.out.println(i3);
+                    i3 -= 5;
+                } while (i3 >= -10);
 
         //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
 
-        //        long i = 2;
-        //        do {
-        //            System.out.println(i);
-        //            i *= i;
-        //        } while (i < 1000000);
+                long i4 = 2;
+                do {
+                    System.out.println(i4);
+                    i4 *= i4;
+                } while (i4 < 1000000);
 
         //        For
         //
@@ -79,19 +79,19 @@ public class ControlFlowExercises {
 
         // count by 2's starting with 0 and ending at 100. Follow each number with a new line.
 
-        for (int i = 0; i <= 100; i += 2) {
-            System.out.println(i);
+        for (int ii = 0; ii <= 100; ii += 2) {
+            System.out.println(ii);
         }
 
         //  refactor the previous two exercises to use a for loop instead.
-        for (int i = 5; i <= 15; i++) {
-            System.out.println(i);
+        for (int ii = 5; ii <= 15; ii++) {
+            System.out.println(ii);
         }
 
         //        Alter your loop to count backwards by 5's from 100 to -10.
 
-        for (int i = 100; i >= -10; i -= 5) {
-            System.out.println(i);
+        for (int ii = 100; ii >= -10; ii -= 5) {
+            System.out.println(ii);
         }
 
         //        Fizzbuzz
@@ -103,16 +103,16 @@ public class ControlFlowExercises {
         //        For the multiples of five: print “Buzz”.
         //        For numbers which are multiples of both three and five: print “FizzBuzz”.
 
-        for (int i = 1; i <= 100; i++) {
+        for (int ii = 1; ii <= 100; ii++) {
             String output = "";
-            if (i % 3 == 0) {
+            if (ii % 3 == 0) {
                 output += " Fizz";
             }
-            if (i % 5 == 0) {
+            if (ii % 5 == 0) {
                 output += " Buzz";
             }
             if (output.isEmpty()) {
-                output = String.format("%d", i);
+                output = String.format("%d", ii);
             }
             System.out.println(output);
         }
@@ -148,10 +148,10 @@ public class ControlFlowExercises {
             System.out.println("number | squared | cubed");
             System.out.println("------ | ------- | -----");
 
-            for (int i = 1; i <= userChoice; i++) {
+            for (int ii = 1; ii <= userChoice; ii++) {
                 String s1 = convertIntToStringOfLengthPaddingRight(i, 6);
-                String s2 = convertIntToStringOfLengthPaddingRight(i * i, 6);
-                String s3 = convertIntToStringOfLengthPaddingRight(i * i * i, 6);
+                String s2 = convertIntToStringOfLengthPaddingRight(ii * ii, 6);
+                String s3 = convertIntToStringOfLengthPaddingRight(ii * ii * ii, 6);
                 System.out.printf("%s | %s  | %s %n", s1, s2, s3);
             }
 
