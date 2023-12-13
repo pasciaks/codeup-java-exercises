@@ -140,8 +140,8 @@ public class ControlFlowExercises {
 
         do {
 
-
             System.out.println("Enter an integer: ");
+
             userChoice = scanner.nextInt();
 
             System.out.println("Here is your table!\n");
