@@ -73,6 +73,7 @@ public class ConsoleExercises {
         //        Rewrite the above example using the nextLine method.
 
         scanner = new Scanner(System.in); // clear out previous scanner input
+
         System.out.println("Enter a sentence: ");
         String sentence2 = scanner.nextLine();
         System.out.println("You entered: --> \"" + sentence2 + "\" <--");
@@ -86,6 +87,7 @@ public class ConsoleExercises {
         //        The area of a rectangle is equal to the length times the width, and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
 
         scanner = new Scanner(System.in); // clear out previous scanner input
+
         System.out.println("Enter the integer length: ");
         String stringLength = scanner.nextLine();
         System.out.println("Enter the integer width: ");
@@ -108,6 +110,7 @@ public class ConsoleExercises {
         //        Calculate the volume of the rooms in addition to the area and perimeter.
 
         scanner = new Scanner(System.in); // clear out previous scanner input
+
         System.out.println("Enter the length as a decimal number: ");
         String stringLength2 = scanner.nextLine();
         System.out.println("Enter the width as a decimal number: ");
@@ -132,6 +135,7 @@ public class ConsoleExercises {
         System.out.printf("The volume of the classroom is: %.2f units cubed.%n", volume);
 
         scanner = new Scanner(System.in); // clear out previous scanner input
+
         System.out.println("Enter the length and width integers separated by a space: ");
         int lengthFromUser = scanner.nextInt();
         int widthFromUser = scanner.nextInt();
