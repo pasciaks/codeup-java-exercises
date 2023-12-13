@@ -38,6 +38,5 @@ public class StringExercise {
         String lineSix = "and the amazing triple backslash \\\\\\!";
         System.out.println(lineSix);
 
-
     }
 }
