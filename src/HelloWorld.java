@@ -26,6 +26,8 @@ public class HelloWorld {
         String myString = "This is my string.";
         System.out.println(myString);
 
+        //        String s = "s";
+
         //        Change your code to assign a character value to myString. What do you notice?
 
         // Fails to compile.  Cannot convert from String to char.
@@ -46,11 +48,19 @@ public class HelloWorld {
 
         //        long myNumber;
 
-        //        System.out.println(myNumber); // java: variable myNumber might not have been initialized
+        //        System.out.println(myNumber); // java: variable myNumber might not have been initialized (after declaring it, but not assigning it a value)
 
         //        Change your code to assign the value 3.14 to myNumber. What do you notice?
 
         //        myNumber = 3.14; // java: incompatible types: possible lossy conversion from double to long
+
+        //        long numeric = 2444444;
+
+        //        int num = 233;
+
+        //        double num2 = 233233D;
+
+        //        System.out.println(num2);
 
         //        System.out.println(myNumber);
 
