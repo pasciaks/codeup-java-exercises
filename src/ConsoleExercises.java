@@ -21,9 +21,20 @@ public class ConsoleExercises {
         //        String userInputLine = scanner.nextLine(); // parses entries by new lines
         //        System.out.println("You entered: --> \"" + userInputLine + "\" <--");
 
-        System.out.print("Enter an integer: ");
+        //
+        //        Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
+        //
+        //        What happens if you input something that is not an integer?
 
+        System.out.print("Enter an integer: ");
         int intValue = scanner.nextInt();
+        System.out.println("You entered: --> \"" + intValue + "\" <--");
+
+        scanner = new Scanner(System.in);
+
+        System.out.println("Enter a string: ");
+        String stringValue = scanner.nextLine();
+        System.out.println("You entered: --> \"" + stringValue + "\" <--");
 
         // *** If non-integer is entered, program crashes with the following error message:
         //        Exception in thread "main" java.util.InputMismatchException
@@ -33,20 +44,27 @@ public class ConsoleExercises {
         //        at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
         //        at ConsoleExercises.main(ConsoleExercises.java:24)
 
+        //        Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
+        //
+        //        What happens if you enter less than 3 words?
+        //        What happens if you enter more than 3 words?
+
+        //  Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
+
+        // ** explore scanner.close(); scanner.reset(); **
+        // scanner.close();
+        // scanner.reset();
+
+        String threeWords = scanner.nextLine();
+
     }
 
 }
 
 //    Explore the Scanner Class.
+
 //
-//        Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
-//
-//        What happens if you input something that is not an integer?
-//
-//        Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
-//
-//        What happens if you enter less than 3 words?
-//        What happens if you enter more than 3 words?
+
 //
 //        Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
 //
