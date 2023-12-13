@@ -7,9 +7,16 @@ public class ConsoleExercises {
         Scanner scanner = new Scanner(System.in);
 
         double pi = 3.14159;
+
+        // solution option 1
         System.out.printf("The value of pi is approximately %.2f.%n", pi);
 
+        // solution option 2
+        System.out.format("The value of pi is approximately %.2f.%n", pi);
+
+        // solution option 3
         String result = String.format("The value of pi is approximately %.2f.%n", pi);
+        System.out.println(result);
 
         // EXPLORING THE SCANNER CLASS
 
