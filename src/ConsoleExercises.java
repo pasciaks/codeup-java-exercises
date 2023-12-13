@@ -86,9 +86,9 @@ public class ConsoleExercises {
         //        The area of a rectangle is equal to the length times the width, and the perimeter of a rectangle is equal to 2 times the length plus 2 times the width.
 
         scanner = new Scanner(System.in); // clear out previous scanner input
-        System.out.println("Enter the length: ");
+        System.out.println("Enter the integer length: ");
         String stringLength = scanner.nextLine();
-        System.out.println("Enter the width: ");
+        System.out.println("Enter the integer width: ");
         String stringWidth = scanner.nextLine();
 
         int length = Integer.parseInt(stringLength);
@@ -139,6 +139,7 @@ public class ConsoleExercises {
         System.out.println("The area of the classroom is: " + (lengthFromUser * widthFromUser) + " units squared.");
 
         scanner = new Scanner(System.in); // clear out previous scanner input
+
         scanner.useDelimiter("\n");
 
         System.out.println("Enter the length and width integers separated by new line: ");
@@ -157,6 +158,6 @@ public class ConsoleExercises {
 //
 //        scanner.useDelimiter("\n");
 //
-//        How does this change the way your program operates?
+//        How does this change the way your program operates? Yes, must enter between values.
 //
 //        Rewrite your classroom program to use nextInt method. If you added the line of code above to your application, you should now have no trouble handling multiple pieces of user input.
