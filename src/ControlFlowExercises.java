@@ -5,9 +5,9 @@ public class ControlFlowExercises {
     /**
      * Converts an integer to a string of a given length, padding with spaces on the left.
      *
-     * @param input
-     * @param length
-     * @return
+     * @param input  - the integer to convert
+     * @param length - the length of the output string
+     * @return - the string representation of the integer, padded with spaces on the left
      */
     public static String convertIntToStringOfLengthPaddingLeft(int input, int length) {
         StringBuilder output = new StringBuilder(String.format("%d", input));
@@ -20,9 +20,9 @@ public class ControlFlowExercises {
     /**
      * Converts an integer to a string of a given length, padding with spaces on the right.
      *
-     * @param input
-     * @param length
-     * @return
+     * @param input  - the integer to convert
+     * @param length - the length of the output string
+     * @return - the string representation of the integer, padded with spaces on the right
      */
     public static String convertIntToStringOfLengthPaddingRight(int input, int length) {
         StringBuilder output = new StringBuilder(String.format("%d", input));
@@ -39,39 +39,39 @@ public class ControlFlowExercises {
         //        Create a while loop that runs so long as i is less than or equal to 15
         //        Each loop iteration, output the current value of i, then increment i by one.
         // ----------------------------------------------------------------------------------------------------------------
-                int i = 5;
-                while (i <= 15) {
-                    System.out.println(i);
-                    i++;
-                }
+        int i = 5;
+        while (i <= 15) {
+            System.out.println(i);
+            i++;
+        }
 
         // ----------------------------------------------------------------------------------------------------------------
         //        Do While
         //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
         // ----------------------------------------------------------------------------------------------------------------
-                int i2 = 0;
-                do {
-                    System.out.println(i2);
-                    i2 += 2;
-                } while (i2 <= 100);
+        int i2 = 0;
+        do {
+            System.out.println(i2);
+            i2 += 2;
+        } while (i2 <= 100);
 
         // ----------------------------------------------------------------------------------------------------------------
         //        Alter your loop to count backwards by 5's from 100 to -10.
         // ----------------------------------------------------------------------------------------------------------------
 
-                int i3 = 100;
-                do {
-                    System.out.println(i3);
-                    i3 -= 5;
-                } while (i3 >= -10);
+        int i3 = 100;
+        do {
+            System.out.println(i3);
+            i3 -= 5;
+        } while (i3 >= -10);
 
         //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
 
-                long i4 = 2;
-                do {
-                    System.out.println(i4);
-                    i4 *= i4;
-                } while (i4 < 1000000);
+        long i4 = 2;
+        do {
+            System.out.println(i4);
+            i4 *= i4;
+        } while (i4 < 1000000);
 
         //        For
         //
@@ -106,10 +106,10 @@ public class ControlFlowExercises {
         for (int ii = 1; ii <= 100; ii++) {
             String output = "";
             if (ii % 3 == 0) {
-                output += " Fizz";
+                output += "Fizz";
             }
             if (ii % 5 == 0) {
-                output += " Buzz";
+                output += "Buzz";
             }
             if (output.isEmpty()) {
                 output = String.format("%d", ii);
@@ -117,6 +117,11 @@ public class ControlFlowExercises {
             System.out.println(output);
         }
 
+        //        String s = "Sheldon"; // Example , self created/used and demonstration code for formatting strings
+        //        String stringLeftPadding = String.format("%15s", s); // pads left
+        //        String stringRightPadding = String.format("%-15s", s); // pads right
+        //        System.out.println("..." + stringLeftPadding + "...");
+        //        System.out.println("..." + stringRightPadding + "...");
 
         //        Display a table of powers.
         //
@@ -128,19 +133,11 @@ public class ControlFlowExercises {
 
         Scanner scanner = new Scanner(System.in);
 
-        String s = "Sheldon";
-
-        String stringLeftPadding = String.format("%15s", s); // pads left
-        String stringRightPadding = String.format("%-15s", s); // pads right
-
-        System.out.println("..." + stringLeftPadding + "...");
-        System.out.println("..." + stringRightPadding + "...");
-
         int userChoice = 0;
 
         do {
 
-            System.out.println("Enter an integer: ");
+            System.out.print("Enter an integer: ");
 
             userChoice = scanner.nextInt();
 
@@ -157,7 +154,7 @@ public class ControlFlowExercises {
 
             scanner = new Scanner(System.in);
 
-            System.out.print("Would you like to continue? [y/n] ");
+            System.out.print("Would you like to continue? [y/N] ");
 
             String userResponse = scanner.nextLine();
 
@@ -210,7 +207,7 @@ public class ControlFlowExercises {
 
             int userGrade = 0;
 
-            System.out.println("Enter a numerical grade from 0 to 100: ");
+            System.out.print("Enter a numerical grade from 0 to 100: ");
 
             userGrade = scanner.nextInt();
 
@@ -232,7 +229,7 @@ public class ControlFlowExercises {
 
             scanner = new Scanner(System.in);
 
-            System.out.println("Would you like to continue? [y/n]");
+            System.out.print("Would you like to continue? [y/N] ");
 
             String userResponse = scanner.nextLine();
 
@@ -344,5 +341,10 @@ public class ControlFlowExercises {
 //        Bonus
 //
 //        Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
-//        [^1]: With some exceptions. Because of how the JVM is implemented, string literals will be re-used, so an expression like "abc" == "abc" will evaluate to true, but only because both sides refer to the same object. This is why it is necessary to use the example with the scanner to demonstrate this concept. Although a shorter demonstration could be done by noting that the expression "abc" == new String("abc") evaluates to false, we feel that this is too complex, given that we have not yet discussed the details of creating objects. See here for more details.
+//        [^1]: With some exceptions.
+//        Because of how the JVM is implemented, string literals will be re-used, so an expression like "abc" == "abc" will evaluate to true,
+//        but only because both sides refer to the same object.
+//        This is why it is necessary to use the example with the scanner to demonstrate this concept.
+//        Although a shorter demonstration could be done by noting that the expression "abc" == new String("abc") evaluates to false,
+//        we feel that this is too complex, given that we have not yet discussed the details of creating objects. See here for more details.
 //
