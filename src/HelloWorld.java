@@ -116,8 +116,7 @@ public class HelloWorld {
             String theNumberThree = "three";
             Object o = theNumberThree;
             int three = (int) o;
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.toString());
         }
 
@@ -132,7 +131,7 @@ public class HelloWorld {
         //
         //        int three = (int) "three";
 
-        //        What are the two different types of errors we are observing? (see above)
+        //        What are the two different types of errors we are observing? (see above) Exception (runtime), versus compile time error.
         //
         //        Rewrite the following expressions using the relevant shorthand assignment operators:
 
@@ -164,7 +163,7 @@ public class HelloWorld {
         y -= x;
 
 
-        //        What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold?
+        //        What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold? (see below)
 
         byte myByte = 127;
 
@@ -181,6 +180,8 @@ public class HelloWorld {
         System.out.println(Integer.MAX_VALUE); // 2147483647
 
         //        [^1]: How many bytes of memory are allocated to store a variable of this data type
+
+        // int	4	Integers from -2,147,483,648 to 2,147,483,647
 
         // 4 bytes used to store this value.
 

@@ -149,7 +149,7 @@ public class ControlFlowExercises {
             System.out.println("------ | ------- | -----");
 
             for (int ii = 1; ii <= userChoice; ii++) {
-                String s1 = convertIntToStringOfLengthPaddingRight(i, 6);
+                String s1 = convertIntToStringOfLengthPaddingRight(ii, 6);
                 String s2 = convertIntToStringOfLengthPaddingRight(ii * ii, 6);
                 String s3 = convertIntToStringOfLengthPaddingRight(ii * ii * ii, 6);
                 System.out.printf("%s | %s  | %s %n", s1, s2, s3);
@@ -157,7 +157,7 @@ public class ControlFlowExercises {
 
             scanner = new Scanner(System.in);
 
-            System.out.println("Would you like to continue? [y/n]");
+            System.out.print("Would you like to continue? [y/n] ");
 
             String userResponse = scanner.nextLine();
 
