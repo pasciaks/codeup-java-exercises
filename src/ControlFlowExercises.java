@@ -167,18 +167,17 @@ public class ControlFlowExercises {
             System.out.println("number | squared | cubed");
             System.out.println("------ | ------- | -----");
 
-//            for (int ii = 1; ii <= userChoice; ii++) {
-//                String s1 = convertIntToStringOfLengthPaddingRight(ii, 6);
-//                String s2 = convertIntToStringOfLengthPaddingRight(ii * ii, 6);
-//                String s3 = convertIntToStringOfLengthPaddingRight(ii * ii * ii, 6);
-//                System.out.printf("%s | %s  | %s %n", s1, s2, s3);
-//            }
+            //            for (int ii = 1; ii <= userChoice; ii++) {
+            //                String s1 = convertIntToStringOfLengthPaddingRight(ii, 6);
+            //                String s2 = convertIntToStringOfLengthPaddingRight(ii * ii, 6);
+            //                String s3 = convertIntToStringOfLengthPaddingRight(ii * ii * ii, 6);
+            //                System.out.printf("%s | %s  | %s %n", s1, s2, s3);
+            //            }
 
             // Better solution
             for (int ii = 1; ii <= userChoice; ii++) {
                 System.out.printf("%-6d | %-7d | %-6d %n", ii, ii * ii, ii * ii * ii);
             }
-            ;
 
             scanner = new Scanner(System.in);
 
