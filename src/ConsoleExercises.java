@@ -31,7 +31,9 @@ public class ConsoleExercises {
         //
         //        Prompt a user to enter a integer and store that value in an int variable using the nextInt method.
         //
-        //        What happens if you input something that is not an integer?
+        //        What happens if you input something that is not an integer?  (exception is thrown, also see below)
+
+        System.out.println("Note: If you enter incorrect entries for the specific prompts asking, the program will crash.");
 
         System.out.print("Enter an integer: ");
         int intValue = scanner.nextInt();
@@ -88,9 +90,9 @@ public class ConsoleExercises {
 
         scanner = new Scanner(System.in); // clear out previous scanner input
 
-        System.out.println("Enter the integer length: ");
+        System.out.print("Enter the integer length: ");
         String stringLength = scanner.nextLine();
-        System.out.println("Enter the integer width: ");
+        System.out.print("Enter the integer width: ");
         String stringWidth = scanner.nextLine();
 
         int length = Integer.parseInt(stringLength);
@@ -111,11 +113,11 @@ public class ConsoleExercises {
 
         scanner = new Scanner(System.in); // clear out previous scanner input
 
-        System.out.println("Enter the length as a decimal number: ");
+        System.out.print("Enter the length as a decimal number: ");
         String stringLength2 = scanner.nextLine();
-        System.out.println("Enter the width as a decimal number: ");
+        System.out.print("Enter the width as a decimal number: ");
         String stringWidth2 = scanner.nextLine();
-        System.out.println("Enter the height as a decimal number: ");
+        System.out.print("Enter the height as a decimal number: ");
         String stringHeight = scanner.nextLine();
 
         double length2 = Double.parseDouble(stringLength2);
@@ -136,7 +138,7 @@ public class ConsoleExercises {
 
         scanner = new Scanner(System.in); // clear out previous scanner input
 
-        System.out.println("Enter the length and width integers separated by a space: ");
+        System.out.print("Enter the integer length and width integers separated by a space: ");
         int lengthFromUser = scanner.nextInt();
         int widthFromUser = scanner.nextInt();
         System.out.println("The perimeter of the classroom is: " + ((2 * lengthFromUser) + (2 * widthFromUser)) + " units.");
@@ -154,7 +156,7 @@ public class ConsoleExercises {
 
         scanner.useDelimiter("\n");
 
-        System.out.println("Enter the length and width integers separated by new line: ");
+        System.out.print("Enter the integer length and width integers separated by new line: ");
         int length3 = scanner.nextInt();
         int width3 = scanner.nextInt();
         System.out.println("The perimeter of the classroom is: " + ((2 * length3) + (2 * width3)) + " units.");

@@ -13,6 +13,10 @@ import java.io.IOError;
 
 public class HelloWorld {
 
+    // NOTE: Much of this code had to be commented out because of it's error/exception behavior and the flow often resulted in duplicate variable declarations.
+
+    // NOTE: The comments for each signify the completion of the exercise.
+
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
@@ -28,9 +32,10 @@ public class HelloWorld {
         String myString = "This is my string.";
         System.out.println(myString);
 
-        //        String s = "s";
-
         //        Change your code to assign a character value to myString. What do you notice?
+
+        //        String s = 's'; // java: incompatible types: char cannot be converted to java.lang.String
+        //        String s = "s"; // This works, because it is a string literal of only one 'character' in length.
 
         // Fails to compile.  Cannot convert from String to char.
 
@@ -50,7 +55,7 @@ public class HelloWorld {
 
         //        long myNumber;
 
-        //        System.out.println(myNumber); // java: variable myNumber might not have been initialized (after declaring it, but not assigning it a value)
+        //        System.out.println(myNumber); // java: BUILD FAILED - variable myNumber might not have been initialized (after declaring it, but not assigning it a value)
 
         //        Change your code to assign the value 3.14 to myNumber. What do you notice?
 
