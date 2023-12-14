@@ -117,6 +117,7 @@ public class HelloWorld {
             Object o = theNumberThree;
             int three = (int) o;
         } catch (Exception e) {
+            System.out.println("Exception caught, see below for details!");
             System.out.println(e.toString());
         }
 
