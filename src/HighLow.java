@@ -6,13 +6,6 @@ public class HighLow {
         return (int) Math.floor(Math.random() * max) + min;
     }
 
-    public static boolean promptUserToContinue(String message) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(message);
-        String userInput = scanner.nextLine();
-        return userInput.equalsIgnoreCase("y");
-    }
-
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
         boolean shouldTryAgain = true;
@@ -40,7 +33,7 @@ public class HighLow {
         //
         //        Welcome to the world of game development!
         //
-        //                You are going to build a high-low guessing game. Create a class named HighLow inside of src.
+        //        You are going to build a high-low guessing game. Create a class named HighLow inside of src.
         //
         //        The specs for the game are:
         //
@@ -71,7 +64,6 @@ public class HighLow {
         boolean wasSuccessful = false;
 
         System.out.println("Welcome to the High-Low guessing game!");
-
         System.out.println("You have " + maxGuesses + " guesses to guess the number between 1 and 100.");
 
         do {
