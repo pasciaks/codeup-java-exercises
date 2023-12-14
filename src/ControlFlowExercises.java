@@ -45,6 +45,8 @@ public class ControlFlowExercises {
             i++;
         }
 
+        System.out.println("--------------------------------------------------");
+
         // ----------------------------------------------------------------------------------------------------------------
         //        Do While
         //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
@@ -54,6 +56,8 @@ public class ControlFlowExercises {
             System.out.println(i2);
             i2 += 2;
         } while (i2 <= 100);
+
+        System.out.println("--------------------------------------------------");
 
         // ----------------------------------------------------------------------------------------------------------------
         //        Alter your loop to count backwards by 5's from 100 to -10.
@@ -65,6 +69,8 @@ public class ControlFlowExercises {
             i3 -= 5;
         } while (i3 >= -10);
 
+        System.out.println("--------------------------------------------------");
+
         //        Create a do-while loop that starts at 2, and displays the number squared on each line while the number is less than 1,000,000.
 
         long i4 = 2;
@@ -72,6 +78,8 @@ public class ControlFlowExercises {
             System.out.println(i4);
             i4 *= i4;
         } while (i4 < 1000000);
+
+        System.out.println("--------------------------------------------------");
 
         //        For
         //
@@ -83,16 +91,22 @@ public class ControlFlowExercises {
             System.out.println(ii);
         }
 
+        System.out.println("--------------------------------------------------");
+
         //  refactor the previous two exercises to use a for loop instead.
         for (int ii = 5; ii <= 15; ii++) {
             System.out.println(ii);
         }
+
+        System.out.println("--------------------------------------------------");
 
         //        Alter your loop to count backwards by 5's from 100 to -10.
 
         for (int ii = 100; ii >= -10; ii -= 5) {
             System.out.println(ii);
         }
+
+        System.out.println("--------------------------------------------------");
 
         //        Fizzbuzz
         //
@@ -116,6 +130,8 @@ public class ControlFlowExercises {
             }
             System.out.println(output);
         }
+
+        System.out.println("--------------------------------------------------");
 
         //        String s = "Sheldon"; // Example , self created/used and demonstration code for formatting strings
         //        String stringLeftPadding = String.format("%15s", s); // pads left
@@ -165,6 +181,8 @@ public class ControlFlowExercises {
             }
 
         } while (userChoice == 0);
+
+        System.out.println("--------------------------------------------------");
 
         //        Example Output
         //
@@ -241,6 +259,7 @@ public class ControlFlowExercises {
 
         } while (userChoice == 0);
 
+        System.out.println("--------------------------------------------------");
 
     }
 }
