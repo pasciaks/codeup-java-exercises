@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    // NOTE -- MORE TO DO IN THIS EXERCISE, RE-READ THE INSTRUCTIONS AND COMPLETE THE EXERCISES (PRACTICE OVER BREAK)
+    public static int getRandomRoll(int min, int max) {
+        return (int) Math.floor(Math.random() * max) + min;
+    }
 
     public static String sayHello(String name) {
         return String.format("Hello, %s!", name);
@@ -347,6 +349,28 @@ public class MethodsExercises {
         //        Use static methods to implement the method(s) that generate the random numbers.
         //                Use the .random method of the java.lang.Math class to generate random numbers.
 
+        do {
+
+            System.out.println("Enter the number of sides for a pair of dice to roll.");
+            int numberOfSides = getInteger(1,Integer.MAX_VALUE);
+            System.out.printf("You entered: %d\n", numberOfSides);
+            System.out.println("Roll the dice?");
+            if (promptUserToContinue()) {
+                System.out.println("Rolling the dice..." + "\n");
+            } else {
+                System.out.println("Goodbye!");
+                break;
+            }
+            int diceRoll1 = (int) getRandomRoll(1, numberOfSides);
+            int diceRoll2 = (int) getRandomRoll(1, numberOfSides);
+            System.out.println("Dice Roll 1: " + diceRoll1);
+            System.out.println("Dice Roll 2: " + diceRoll2);
+            System.out.println("Roll again?");
+
+        } while (promptUserToContinue());
+
+        // @todo ---------------------------------
+
 
         //        (5)       Game Development 101
         //
@@ -371,6 +395,7 @@ public class MethodsExercises {
         //        Keep track of how many guesses a user makes.
         //                Set an upper limit on the number of guesses.
 
+        // @todo ---------------------------------
 
     }
 }
