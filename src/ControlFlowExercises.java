@@ -108,6 +108,12 @@ public class ControlFlowExercises {
 
         System.out.println("--------------------------------------------------");
 
+        for (long nn = 2; nn < 1000000; nn *= nn) {
+            System.out.println(nn);
+        }
+
+        System.out.println("--------------------------------------------------");
+
         //        Fizzbuzz
         //
         //        One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
