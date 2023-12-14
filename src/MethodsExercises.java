@@ -29,12 +29,54 @@ public class MethodsExercises {
         count(n - 1);
     }
 
+    public static long factorialForLoop(int n) {
+        long result = 1;
+        for (int i = n; i >= 1; i--) {
+            result *= i; // result = result * i;
+        }
+        return result;
+    }
+
     // Factorial using recursion
     public static long factorial(int n) {
         if (n == 1) {
             return 1;
         }
         return n * factorial(n - 1);
+    }
+
+    public static int multiplyIntRecursive(int num1, int num2) {
+        if (num1 == 0 || num2 == 0) {
+            return 0;
+        }
+        else if(num2 > 0){
+            return num1 + multiplyIntRecursive(num1, num2 - 1);
+        }
+        else{
+            return -num1 + multiplyIntRecursive(num1, num2 + 1);
+        }
+    }
+
+    // NOTE: Using overloading on method addNumbers
+
+    public static byte addNumbers(byte x, byte y) {
+        return (byte) (x + y); // NOTE: Just extra testing and experimentation
+    }
+
+    public static int addNumbers(int x, int y) {
+        return x + y;
+    }
+
+    public static long addNumbers(long x, long y) {
+        return x + y;
+    }
+
+    public static float addNumbers(float x, float y) {
+        return (x + y);
+    }
+
+    public static double addNumbers(double x, double y) {
+        return (x + y);
     }
 
     public static int addIntegers(int x, int y) {
@@ -61,6 +103,32 @@ public class MethodsExercises {
         return x % y;
     }
 
+    // NOTE: Although Method Overloading is possible, it is not recommended to do so because it can lead to confusion in this case.
+    // NOTE: For these examples, it is better to use a different method name for each method to be more clear.
+    // NOTE: Method Overloading is useful when you want to use the same method name for different methods that do different things.
+
+    public static double addDoubles(double x, double y) {
+        return x + y;
+    }
+
+    public static double subtractDoubles(double x, double y) {
+        return x - y;
+    }
+
+    public static double multiplyDoubles(double x, double y) {
+        return x * y;
+    }
+
+    public static double divideDoubles(double x, double y) {
+        return x / y;
+    }
+
+    // NOTE: Testing, is there such as thing as modulus for doubles?
+
+    public static double modulusDoubles(double x, double y) {
+        return x % y;
+    }
+
     public static long addLongs(long x, long y) {
         return x + y;
     }
@@ -83,6 +151,14 @@ public class MethodsExercises {
             product += value;
         }
         return product;
+    }
+
+    // The following function will prompt if the user wants to continue, returning boolean value
+    public static boolean promptUserToContinue() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Would you like to continue? [y/N] ");
+        String userInput = scanner.nextLine();
+        return userInput.equalsIgnoreCase("y");
     }
 
     public static int getInteger(int min, int max) {
@@ -161,8 +237,9 @@ public class MethodsExercises {
             System.out.printf("%d / %d = %d\n", k, l, divideIntegers(k, l));
 
         } catch (Exception exception) {
-
-            System.out.println("Exception caught: " + exception);
+            System.out.println("----------------------------------------------------------------------------");
+            System.out.println("MY Personal Exception caught: " + exception);
+            System.out.println("----------------------------------------------------------------------------");
 
             //             Exception in thread "main" java.lang.ArithmeticException: divide by zero
             //             at MethodsExercises.divideIntegers(MethodsExercises.java:47)
@@ -171,45 +248,66 @@ public class MethodsExercises {
         }
 
 
-        //                Bonus
+        //------ using overloading - testing
 
-        //        Create your multiplication method without the * operator (Hint: a loop might be helpful).
+        int integerValue1 = 1;
+        int integerValue2 = 2;
+        System.out.printf("integer addition overloading: %d + %d = %d\n", integerValue1, integerValue2, addNumbers(integerValue1, integerValue2));
+
+        long longValue1 = 1111111111L;
+        long longValue2 = 2222222222L;
+        System.out.printf("long addition overloading: %d + %d = %d\n", longValue1, longValue2, addNumbers(longValue1, longValue2));
 
         int m = 5;
         int n = 3;
+        System.out.print("Multiplication without * operator: ");
         System.out.printf("%d * %d = %d\n", m, n, productFromValueAndNumber(m, n));
 
+        // Additional testing of methods...
+
+        int resultOfRecursiveMultiplication = multiplyIntRecursive(4, 2);
+        System.out.printf("using multiplyIntRecursive --> 4 * 2 = %d\n", resultOfRecursiveMultiplication);
+
+        int resultOfRecursiveMultiplicationNegatives = multiplyIntRecursive(-5, 3);
+        System.out.printf("using multiplyIntRecursive --> -5 * 3 = %d\n", resultOfRecursiveMultiplicationNegatives);
+
+        //-------------------------
+        //        Bonus
+
+        //        Create your multiplication method without the * operator (Hint: a loop might be helpful).
         //        Do the above with recursion.
-
-        //        Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range. If not, prompt the user to input their number again until the input is within range.
-
-        //                The method signature should look like this:
-        //
+        //        Create a method that validates that user input is in a certain range and returns that input as an integer if it is within the given range.
+        //        If not, prompt the user to input their number again until the input is within range.
+        //        The method signature should look like this:
         //        public static int getInteger(int min, int max);
-
         //        and is used like this:
-        //
         //        System.out.print("Enter a number between 1 and 10: ");
+
+        System.out.println("----[Integer Input - only in range of min-max]----");
 
         int userInput = getInteger(1, 10);
         System.out.printf("You entered: %d\n", userInput);
 
         //        If the input is invalid, prompt the user again.
-        //
         //                Hint: recursion might be helpful here!
-        //
         //                Calculate the factorial of a number.
-        //
         //                Prompt the user to enter an integer from 1 to 10.
-        //
         //        Display the factorial of the number entered by the user.
 
+        do {
 
-        int numForFactorial = getInteger(1, 10);
-        System.out.printf("You entered: %d\n", numForFactorial);
-        System.out.printf("%d! = %d\n", numForFactorial, factorial(numForFactorial));
+            System.out.println("----[Factorial Fun]----");
 
-        //
+            System.out.println("----[LONG data type means factorial max is 1-20]----");
+
+            int numForFactorial = getInteger(1, 20);
+            System.out.printf("You entered: %d\n", numForFactorial);
+            System.out.printf("Using For Loop: %d! = %d\n", numForFactorial, factorialForLoop(numForFactorial));
+            System.out.printf("Using Recursive Function: %d! = %d\n", numForFactorial, factorial(numForFactorial));
+
+        } while (promptUserToContinue());
+
+
         //        Ask if the user wants to continue.
         //
         //        Use a for loop to calculate the factorial.
@@ -231,16 +329,26 @@ public class MethodsExercises {
 
         //        Bonus
         //
-        //        Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the prompt so that it prompts the user for a number "from 1 to {the highest integer that returns accurate factorial calculation}". Don’t forget to change your verification too!
+        //        Test the application and find the integer for the highest factorial that can be accurately calculated by this application,
+        //        then modify the prompt so that it prompts the user for a number "from 1 to {the highest integer that returns
+        //        accurate factorial calculation}". Don’t forget to change your verification too!
+
         //                Use recursion to implement the factorial.
-        //                Create an application that simulates dice rolling.
+
+        System.out.println(factorial(10)); // 3628800
+        System.out.println(factorial(20)); // 2432902008176640000L
+        System.out.println(factorial(21)); // -4249290049419214848L - ERROR, OVERFLOW
+
+        //        (4)        Create an application that simulates dice rolling.
         //
         //        Ask the user to enter the number of sides for a pair of dice.
         //        Prompt the user to roll the dice.
         //                "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
         //        Use static methods to implement the method(s) that generate the random numbers.
         //                Use the .random method of the java.lang.Math class to generate random numbers.
-        //        Game Development 101
+
+
+        //        (5)       Game Development 101
         //
         //        Welcome to the world of game development!
         //
