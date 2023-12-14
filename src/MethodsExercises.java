@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
+    // NOTE -- MORE TO DO IN THIS EXERCISE, RE-READ THE INSTRUCTIONS AND COMPLETE THE EXERCISES (PRACTICE OVER BREAK)
+
     public static String sayHello(String name) {
         return String.format("Hello, %s!", name);
     }
@@ -88,13 +90,17 @@ public class MethodsExercises {
         boolean shouldTryAgain = true;
         int validUserInput = 0;
         do {
-            scanner = new Scanner(System.in);
-            System.out.printf("Enter a number between %d and %d: ", min, max);
-            String userInputString = scanner.nextLine();
-            int userInput = Integer.parseInt(userInputString);
-            if (userInput >= min && userInput <= max) {
-                validUserInput = userInput;
-                shouldTryAgain = false;
+            try {
+                scanner = new Scanner(System.in);
+                System.out.printf("Enter a number between %d and %d: ", min, max);
+                String userInputString = scanner.nextLine();
+                int userInput = Integer.parseInt(userInputString);
+                if (userInput >= min && userInput <= max) {
+                    validUserInput = userInput;
+                    shouldTryAgain = false;
+                }
+            } catch (NumberFormatException nfe) {
+                System.out.println("Invalid input. Try again.");
             }
         } while (shouldTryAgain);
         return validUserInput;
@@ -197,6 +203,12 @@ public class MethodsExercises {
         //                Prompt the user to enter an integer from 1 to 10.
         //
         //        Display the factorial of the number entered by the user.
+
+
+        int numForFactorial = getInteger(1, 10);
+        System.out.printf("You entered: %d\n", numForFactorial);
+        System.out.printf("%d! = %d\n", numForFactorial, factorial(numForFactorial));
+
         //
         //        Ask if the user wants to continue.
         //
