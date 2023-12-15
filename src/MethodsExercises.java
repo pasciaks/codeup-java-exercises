@@ -342,7 +342,6 @@ public class MethodsExercises {
         System.out.println(factorial(21)); // -4249290049419214848L - ERROR, OVERFLOW
 
         //        (4)        Create an application that simulates dice rolling.
-        //
         //        Ask the user to enter the number of sides for a pair of dice.
         //        Prompt the user to roll the dice.
         //                "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
@@ -368,35 +367,6 @@ public class MethodsExercises {
             System.out.println("Roll again?");
 
         } while (promptUserToContinue());
-
-        //        (5)       Game Development 101  (see additional class file)
-        //
-        //        Welcome to the world of game development!
-        //
-        //                You are going to build a high-low guessing game. Create a class named HighLow inside of src.
-        //
-        //        The specs for the game are:
-        //
-        //        Game picks a random number between 1 and 100.
-
-        //        Prompts user to guess the number.
-
-        //        All user inputs are validated.
-
-        //        If user's guess is less than the number, it outputs "HIGHER".
-        //        If user's guess is more than the number, it outputs "LOWER".
-        //        If a user guesses the number, the game should declare "GOOD GUESS!"
-
-        //        Hints
-        //
-        //        Use the random method of the java.lang.Math class to generate a random number.
-
-        //        Bonus
-        //
-        //        Keep track of how many guesses a user makes.
-
-        //        Set an upper limit on the number of guesses.
-
 
     }
 }
