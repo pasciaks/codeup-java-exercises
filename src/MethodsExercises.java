@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
+    public static void areWeThereYet(Scanner sc) {
+        System.out.print("Are we there yet? yes/NO? ");
+        String userInput = sc.nextLine();
+        if (userInput.equalsIgnoreCase("yes")) {
+            System.out.println("Yay!");
+        } else {
+            areWeThereYet(sc);
+        }
+    }
+
     public static int getRandomRoll(int min, int max) {
         return (int) Math.floor(Math.random() * max) + min;
     }
@@ -367,6 +377,10 @@ public class MethodsExercises {
             System.out.println("Roll again?");
 
         } while (promptUserToContinue());
+
+        // test areWeThereYet method
+        Scanner sc = new Scanner(System.in);
+        areWeThereYet(sc);
 
     }
 }
