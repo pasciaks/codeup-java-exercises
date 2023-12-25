@@ -38,7 +38,7 @@ public class MethodsExercises {
 
     // Factorial using recursion
     public static long factorial(int n) {
-        if (n == 1) {
+        if (n == 1 || n ==0) {
             return 1;
         }
         return n * factorial(n - 1);
@@ -53,11 +53,9 @@ public class MethodsExercises {
     public static int multiplyIntRecursive(int num1, int num2) {
         if (num1 == 0 || num2 == 0) {
             return 0;
-        }
-        else if(num2 > 0){
+        } else if (num2 > 0) {
             return num1 + multiplyIntRecursive(num1, num2 - 1);
-        }
-        else{
+        } else {
             return -num1 + multiplyIntRecursive(num1, num2 + 1);
         }
     }
@@ -178,15 +176,25 @@ public class MethodsExercises {
         do {
             try {
                 scanner = new Scanner(System.in);
+                System.out.println("Enter the max integer value to self destruct: 2147483647");
                 System.out.printf("Enter a number between %d and %d: ", min, max);
                 String userInputString = scanner.nextLine();
                 int userInput = Integer.parseInt(userInputString);
+                if (userInput == Integer.MAX_VALUE) {
+                    throw new Exception("MY Personal Exception: Max integer value - self destructing...");
+                }
                 if (userInput >= min && userInput <= max) {
                     validUserInput = userInput;
                     shouldTryAgain = false;
                 }
             } catch (NumberFormatException nfe) {
                 System.out.println("Invalid input. Try again.");
+            } catch (Exception exception) {
+                System.out.println("----------------------------------------------------------------------------");
+                System.out.println("MY Personal Exception caught: " + exception);
+                System.out.println("This will abort the program completely with exit code 0.");
+                System.out.println("----------------------------------------------------------------------------");
+                System.exit(0);
             }
         } while (shouldTryAgain);
         return validUserInput;
@@ -236,6 +244,35 @@ public class MethodsExercises {
         int i = 10;
         int j = 3;
         System.out.printf("%d %% %d = %d\n", i, j, modulusIntegers(i, j));
+
+        long l1 = 1000L;
+        long l2 = 100L;
+
+        System.out.printf("%d + %d = %d\n", l1, l2, addLongs(l1, l2));
+        System.out.printf("%d - %d = %d\n", l1, l2, subtractLongs(l1, l2));
+        System.out.printf("%d * %d = %d\n", l1, l2, multiplyLongs(l1, l2));
+        System.out.printf("%d / %d = %d\n", l1, l2, divideLongs(l1, l2));
+        System.out.printf("%d %% %d = %d\n", l1, l2, modulusLongs(l1, l2));
+
+        byte b1 = 1;
+        byte b2 = 4;
+
+        System.out.printf("%d + %d = %d\n", b1, b2, addNumbers(b1, b2));
+
+        float ff1 = 1.0f;
+        float ff2 = 2.0f;
+
+        System.out.printf("%f + %f = %f\n", ff1, ff2, addNumbers(ff1, ff2));
+
+        double d1 = 1000.0;
+        double d2 = 100.0;
+
+        System.out.printf("%f + %f = %f\n", d1, d2, addNumbers(d1, d2));
+        System.out.printf("%f + %f = %f\n", d1, d2, addDoubles(d1, d2));
+        System.out.printf("%f - %f = %f\n", d1, d2, subtractDoubles(d1, d2));
+        System.out.printf("%f * %f = %f\n", d1, d2, multiplyDoubles(d1, d2));
+        System.out.printf("%f / %f = %f\n", d1, d2, divideDoubles(d1, d2));
+        System.out.printf("%f %% %f = %f\n", d1, d2, modulusDoubles(d1, d2));
 
         //                Food for thought: What happens if we try to divide by zero? What should happen? Error/Exception
 
@@ -345,9 +382,25 @@ public class MethodsExercises {
 
         //                Use recursion to implement the factorial.
 
-        System.out.println(factorial(10)); // 3628800
-        System.out.println(factorial(20)); // 2432902008176640000L
-        System.out.println(factorial(21)); // -4249290049419214848L - ERROR, OVERFLOW
+        System.out.println("Testing the limits of the factorial function...");
+
+        System.out.println("Factorial 0 = " + factorial(0)); // 1
+        System.out.println("Factorial 0 = " + factorialForLoop(0)); // 1
+
+        System.out.println("Factorial 1 = " + factorial(1)); // 1
+        System.out.println("Factorial 1 = " + factorialForLoop(1)); // 1
+
+        System.out.println("Factorial 5 = " + factorial(5)); // 1
+        System.out.println("Factorial 5 = " + factorialForLoop(5)); // 1
+
+        System.out.println("Factorial 10 = " + factorial(10)); // 3628800
+        System.out.println("Factorial 10 = " + factorialForLoop(10)); // 3628800
+
+        System.out.println("Factorial 20 = " + factorial(20)); // 2432902008176640000L
+        System.out.println("Factorial 20 = " + factorialForLoop(20)); // 2432902008176640000L
+
+        System.out.println("Factorial 21 = " + factorial(21)); // -4249290049419214848L - ERROR, OVERFLOW
+        System.out.println("Factorial 21 = " + factorialForLoop(21)); // 2432902008176640000L - ERROR, OVERFLOW
 
         //        (4)        Create an application that simulates dice rolling.
         //        Ask the user to enter the number of sides for a pair of dice.
@@ -359,7 +412,7 @@ public class MethodsExercises {
         do {
 
             System.out.println("Enter the number of sides for a pair of dice to roll.");
-            int numberOfSides = getInteger(1,Integer.MAX_VALUE);
+            int numberOfSides = getInteger(1, Integer.MAX_VALUE);
             System.out.printf("You entered: %d\n", numberOfSides);
             System.out.println("Roll the dice?");
             if (promptUserToContinue()) {
