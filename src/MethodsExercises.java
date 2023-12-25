@@ -2,6 +2,11 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
+    /**
+     * This method will prompt the user to enter a number between min and max.
+     * If the user enters a number within the range, the method will return the number.
+     * If the user enters a number outside the range, the method will prompt the user to try again.
+     */
     public static void areWeThereYet(Scanner sc) {
         System.out.print("Are we there yet? yes/NO? ");
         String userInput = sc.nextLine();
@@ -12,35 +17,17 @@ public class MethodsExercises {
         }
     }
 
+    /**
+     * This method will return a random integer number between min and max.
+     *
+     * @param min The minimum value for the random number.
+     * @param max The maximum value for the random number.
+     */
     public static int getRandomRoll(int min, int max) {
         return (int) Math.floor(Math.random() * max) + min;
     }
 
-    public static String sayHello(String name) {
-        return String.format("Hello, %s!", name);
-    }
-
-    public static void sayHello(String greeting, String name) {
-        System.out.printf("%s, %s!\n", greeting, name);
-    }
-
-    public static int returnThree() {
-        return 3;
-    }
-
-    public static String shout(String s) {
-        return s.toUpperCase() + "!!!";
-    }
-
-    public static void count(int n) {
-        if (n <= 0) {
-            System.out.println("All done!");
-            return;
-        }
-        System.out.println(n);
-        count(n - 1);
-    }
-
+    // Factorial using for loop
     public static long factorialForLoop(int n) {
         long result = 1;
         for (int i = n; i >= 1; i--) {
@@ -57,6 +44,12 @@ public class MethodsExercises {
         return n * factorial(n - 1);
     }
 
+    /**
+     * This method will return the product of two integers using recursion.
+     *
+     * @param num1 The first integer.
+     * @param num2 The second integer.
+     */
     public static int multiplyIntRecursive(int num1, int num2) {
         if (num1 == 0 || num2 == 0) {
             return 0;
@@ -173,6 +166,11 @@ public class MethodsExercises {
         return userInput.equalsIgnoreCase("y");
     }
 
+    /**
+     * This method will prompt the user to enter a number between min and max.
+     * If the user enters a number within the range, the method will return the number.
+     * If the user enters a number outside the range, the method will prompt the user to try again.
+     */
     public static int getInteger(int min, int max) {
         Scanner scanner;
         boolean shouldTryAgain = true;
